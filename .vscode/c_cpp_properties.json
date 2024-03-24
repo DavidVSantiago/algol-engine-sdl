@@ -1,6 +1,6 @@
 {
     "configurations": [
-        {
+        /*{
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
@@ -11,6 +11,27 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64"
+        },*/
+        {
+            "name": "Windows",
+            "includePath": [
+                "c:/Users/David Santiago/Documents/CODES/algol-engine-sdl/**",
+                "c:/SDL2/x86_64-w64-mingw32/include"
+            ],
+            "defines": [],
+            "compilerPath": "C:\\MinGW64\\bin\\g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x86",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "c:/Users/David Santiago/Documents/CODES/algol-engine-sdl/**",
+                    "c:/SDL2/x86_64-w64-mingw32/include",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ],
     "version": 4

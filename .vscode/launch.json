@@ -30,14 +30,14 @@
             "name": "Windows Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/windows/main",
+            "program": "${workspaceFolder}/bin/windows/main.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath":"/usr/bin/gdb",
+            "miDebuggerPath":"C:/MinGW64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

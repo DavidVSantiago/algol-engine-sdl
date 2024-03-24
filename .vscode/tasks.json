@@ -18,7 +18,7 @@
         {
             "type": "shell",
             "label": "Windows_Task",
-            "command": "sh ${workspaceFolder}/build-windows.sh",
+            "command": "${workspaceFolder}/build-windows.bat",
             "args": [],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -27,7 +27,7 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "compiler: /usr/bin/g++"
+            "detail": "compiler: C:/MinGW64/bin/g++.exe"
         },
         
     ]
