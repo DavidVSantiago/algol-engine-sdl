@@ -3,5 +3,12 @@
         "iostream": "cpp",
         "new": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "sourceFiles": [
+        "src/main.cpp"," ",
+        "src/engine/Engine.h"," ",
+        "src/engine/Engine.cpp"," ",
+    ],
+    "compiler":"g++",
+    
 }

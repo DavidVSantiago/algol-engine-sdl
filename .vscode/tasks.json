@@ -16,6 +16,7 @@
             "detail": "compiler: /usr/bin/g++"
         },
         {
+            
             "type": "shell",
             "label": "Windows_Task",
             "command": "g++",
@@ -24,6 +25,7 @@
                 "-g",
                 "src/main.cpp",
                 "src/engine/Engine.h",
+                "src/engine/Engine.cpp",
                 "-o",
                 "bin/windows/main",
                 "-IC:/SDL2/x86_64-w64-mingw32/include",
@@ -40,8 +42,11 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "compiler: C:/MinGW64/bin/g++.exe"
+            "detail": "compiler: C:/MinGW/bin/g++.exe"
         },
         
-    ]
+    ],
+    "variables": {
+        "import": "./build-windows.json",
+    }
 }
