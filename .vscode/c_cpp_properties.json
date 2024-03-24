@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/Users/David Santiago/Documents/CODES/algol-engine-sdl/**",
+                "c:/Users/Almir Santiago/Documents/CODES/algol-engine-sdl/**",
                 "c:/SDL2/x86_64-w64-mingw32/include"
             ],
             "defines": [],
@@ -14,7 +14,7 @@
             "mergeConfigurations": false,
             "browse": {
                 "path": [
-                    "c:/Users/David Santiago/Documents/CODES/algol-engine-sdl/**",
+                    "c:/Users/Almir Santiago/Documents/CODES/algol-engine-sdl/**",
                     "c:/SDL2/x86_64-w64-mingw32/include",
                     "${workspaceFolder}"
                 ],
