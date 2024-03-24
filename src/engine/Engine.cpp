@@ -61,7 +61,7 @@ void Engine::gameloop()
         this->update();
         this->render();
 
-        this->tempoAnterior = this->tempoAtual; // atualiza o tempo anterior (para o próximo quadro)
+        //this->tempoAnterior = this->tempoAtual; // atualiza o tempo anterior (para o próximo quadro)
     }
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
