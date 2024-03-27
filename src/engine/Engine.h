@@ -3,7 +3,6 @@
 // #include "Resources.h"
 #include <SDL2/SDL.h>
 #include "Resources.h"
-#include <iostream>
 
 class Engine
 {

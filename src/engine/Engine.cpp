@@ -45,7 +45,7 @@ void Engine::render()
     SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderPresent(renderer);
-    std::cout << this->res->deltaTime;
+    //std::cout << this->res->deltaTime;
 }
 
 void Engine::gameloop()
