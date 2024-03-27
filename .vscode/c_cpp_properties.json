@@ -10,7 +10,7 @@
             "compilerPath": "C:\\MinGW\\bin\\g++",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-86",
+            "intelliSenseMode": "windows-clang-x86",
             "mergeConfigurations": false,
             "browse": {
                 "path": [
