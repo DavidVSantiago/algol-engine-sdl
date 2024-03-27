@@ -1,2 +1,18 @@
-mkdir -p bin/linux
-/usr/bin/g++ -fdiagnostics-color=always -g src/main.cpp src/engine/Engine.h src/engine/Engine.cpp -o bin/linux/main -IC:/usr/include/SDL2 -LC:/usr/lib/x86_64-linux-gnu -lSDL2main -lSDL2
+#!/bin/bash
+COMPILER=/usr/bin/g++
+OUTPUT=bin/linux/main
+SDL_INCLUDE=-IC:/usr/include/SDL2
+SDL_LIB=-LC:/usr/lib/x86_64-linux-gnu
+
+# Lê todas as linhas do arquivo sources.txt
+while read -r linha; do
+  SOURCES="$SOURCES $linha"
+done < compile_sources.txt
+
+# Lê todas as linhas do arquivo parametrosSDL.txt
+while read -r linha; do
+  PARAMS="$PARAMS $linha"
+done < compile_SDLparams.txt
+
+# execução
+$COMPILER -fdiagnostics-color=always -g $SOURCES -o $OUTPUT $SDL_INCLUDE $SDL_LIB $PARAMS
