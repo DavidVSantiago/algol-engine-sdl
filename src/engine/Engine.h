@@ -2,14 +2,15 @@
 #define ENGINE_H
 // #include "Resources.h"
 #include <SDL2/SDL.h>
+#include "Resources.h"
 #include <iostream>
 
 class Engine
 {
 private:
     /* ATRIBUTOS PRIVADOS */
-    //Uint64 tempoAnterior, tempoAtual;
-    // Resources* res;
+    Uint64 tempoAnterior, tempoAtual;
+    Resources* res;
 
     /* MÉTODOS PRIVADOS */
     void checkEvents();

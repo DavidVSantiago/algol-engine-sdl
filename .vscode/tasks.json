@@ -19,8 +19,8 @@
             
             "type": "shell",
             "label": "Windows_Task",
-            "command": "g++",
-            "args": [
+            "command": "${workspaceFolder}/build-windows.bat",
+            /*"args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "src/main.cpp",
@@ -34,7 +34,7 @@
                 "-lSDL2main",
                 "-lSDL2",
                 "-mwindows",
-            ],
+            ],*/
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -42,7 +42,7 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "compiler: C:/MinGW/bin/g++.exe"
+            "detail": "compiler: C:/MinGW64/bin/g++.exe"
         },
         
     ],

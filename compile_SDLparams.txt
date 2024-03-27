@@ -1,3 +1,2 @@
 -lSDL2main
 -lSDL2
--

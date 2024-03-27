@@ -13,8 +13,8 @@ Engine::Engine(int width, int height)
     this->isRunning = true;
 
     // inicializa o Resources
-    //res = Resources::getInstance();
-    //res->init(width, height);
+    this->res = Resources::getInstance();;
+    this->res->init(width, height);
 
     // inicializa o SceneManager
 
@@ -45,7 +45,7 @@ void Engine::render()
     SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderPresent(renderer);
-    //std::cout << this->res.deltaTime;
+    std::cout << this->res->deltaTime;
 }
 
 void Engine::gameloop()
@@ -54,14 +54,14 @@ void Engine::gameloop()
     {
         checkEvents(); // trata os eventos
 
-        //this->tempoAtual = this->res->getTimeTick();
-        //this->res->deltaTime = (this->tempoAtual - this->tempoAnterior);
+        this->tempoAtual = this->res->getTimeTick();
+        this->res->deltaTime = (this->tempoAtual - this->tempoAnterior);
 
         this->handleEvents();
         this->update();
         this->render();
 
-        //this->tempoAnterior = this->tempoAtual; // atualiza o tempo anterior (para o próximo quadro)
+        this->tempoAnterior = this->tempoAtual; // atualiza o tempo anterior (para o próximo quadro)
     }
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);

@@ -7,10 +7,10 @@
                 "c:/SDL2/x86_64-w64-mingw32/include"
             ],
             "defines": [],
-            "compilerPath": "C:\\MinGW\\bin\\g++",
+            "compilerPath": "C:/MinGW64/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-clang-x86",
+            "intelliSenseMode": "windows-gcc-x64",
             "mergeConfigurations": false,
             "browse": {
                 "path": [
