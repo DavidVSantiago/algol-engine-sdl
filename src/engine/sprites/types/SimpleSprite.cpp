@@ -24,7 +24,7 @@ SimpleSprite::~SimpleSprite()
 
 SDL_Rect* SimpleSprite::getFrame()
 {
-  if(frames.size() > 0)
+  //if(frames->size() > 0)
   // {
   //   // Validar se o índice 0 do primeiro elemento está dentro dos limites
   //   if (this->frames[0].size() > 0)

@@ -2,8 +2,9 @@
 #define SPRITE_H
 // #include "Resources.h"
 #include <SDL2/SDL.h>
-#include <vector>
+#include "../utils/estruturas_de_dados.h"
 #include "../Resources.h"
+
 
 using namespace std;
 
@@ -13,7 +14,7 @@ class Sprite
 {
 public:
     /* ATRIBUTOS ------------------------------------------------------------------*/
-    extern vector<vector<SDL_Rect>> frames; // matriz de frames do sprite
+    SpriteList* frames; // matriz de frames do sprite
     int posX;
     int posY;
     int speedX;

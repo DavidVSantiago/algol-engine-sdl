@@ -1,9 +1,5 @@
-src/main.cpp
-src/engine/Engine.h
-src/engine/Engine.cpp
-src/engine/Resources.h
-src/engine/Resources.cpp
-src/engine/sprites/Sprite.h
-src/engine/sprites/Sprite.cpp
-src/engine/sprites/types/SimpleSprite.h
-src/engine/sprites/types/SimpleSprite.cpp
+src/engine/utils/*.cpp
+src/*.cpp
+src/engine/*.cpp
+src/engine/sprites/*.cpp
+src/engine/sprites/types/*.cpp

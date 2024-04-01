@@ -1,5 +1,5 @@
-#ifndef RESOURCES_H
-#define RESOURCES_H
+#pragma once
+
 #include <SDL2/SDL.h>
 
 class Resources
@@ -23,5 +23,3 @@ public:
     void init(int width, int height);
     Uint64 getTimeTick();
 };
-
-#endif

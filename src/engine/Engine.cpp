@@ -7,8 +7,6 @@
 Engine::Engine(int width, int height)
 {
 
-    
-
     // inicializa o SDL
     SDL_Init(SDL_INIT_EVERYTHING);
     this->isRunning = true;

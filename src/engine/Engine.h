@@ -1,6 +1,5 @@
-#ifndef ENGINE_H
-#define ENGINE_H
-// #include "Resources.h"
+#pragma once
+
 #include <SDL2/SDL.h>
 #include "Resources.h"
 #include "sprites/types/SimpleSprite.h"
@@ -32,5 +31,3 @@ public:
     void render();
     void gameloop();
 };
-
-#endif
