@@ -6,20 +6,21 @@
 
 Engine::Engine(int width, int height)
 {
+
+    
+
     // inicializa o SDL
     SDL_Init(SDL_INIT_EVERYTHING);
-    window = SDL_CreateWindow("Hello SDL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0);
-    renderer = SDL_CreateRenderer(window, -1, 0);
     this->isRunning = true;
 
     // inicializa o Resources
     this->res = Resources::getInstance();;
     this->res->init(width, height);
+    sprite = new SimpleSprite("braid-jump-teste.png");
 
     // inicializa o SceneManager
 
     // eventos de pressionamentos e soltura das teclas
-
     // dispara o gameloop
     gameloop();
 }
@@ -42,9 +43,10 @@ void Engine::update()
 
 void Engine::render()
 {
-    SDL_RenderClear(renderer);
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-    SDL_RenderPresent(renderer);
+    SDL_RenderClear(this->res->renderer);
+    SDL_SetRenderDrawColor(this->res->renderer, 255, 0, 0, 255);
+    sprite->render();
+    SDL_RenderPresent(this->res->renderer);
     //std::cout << this->res->deltaTime;
 }
 
@@ -63,8 +65,8 @@ void Engine::gameloop()
 
         this->tempoAnterior = this->tempoAtual; // atualiza o tempo anterior (para o próximo quadro)
     }
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    SDL_DestroyRenderer(this->res->renderer);
+    SDL_DestroyWindow(this->res->window);
     SDL_Quit();
 }
 

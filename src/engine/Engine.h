@@ -3,6 +3,8 @@
 // #include "Resources.h"
 #include <SDL2/SDL.h>
 #include "Resources.h"
+#include "sprites/types/SimpleSprite.h"
+#include "sprites/Sprite.h"
 
 class Engine
 {
@@ -10,14 +12,13 @@ private:
     /* ATRIBUTOS PRIVADOS */
     Uint64 tempoAnterior, tempoAtual;
     Resources* res;
+    SimpleSprite* sprite;
 
     /* MÉTODOS PRIVADOS */
     void checkEvents();
 
 public:
     /* ATRIBUTOS */
-    SDL_Window *window;
-    SDL_Renderer *renderer;
     SDL_Event event;
     bool isRunning;
 

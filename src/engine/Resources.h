@@ -10,30 +10,18 @@ private:
     Resources(){}
     ~Resources(){}
 public:
+
     /* ATRIBUTOS */
     long deltaTime;
     bool vk_up,vk_down,vk_left,vk_right;
     int screenWidth,screenHeigth;
+    SDL_Window *window;
+    SDL_Renderer *renderer;
 
     /* MÉTODOS */
-
-    static Resources* getInstance(){
-        if(instance==nullptr){
-            instance=new Resources;
-        }
-        return instance;
-    }   
-    
-    void init(int width, int height) {
-        vk_up=vk_down=vk_left=vk_right=false;
-        screenWidth=width;
-        screenHeigth=height;
-        deltaTime=0;
-    }
-
-    Uint64 getTimeTick(){
-        return SDL_GetPerformanceCounter();
-    }
+    static Resources* getInstance();
+    void init(int width, int height);
+    Uint64 getTimeTick();
 };
 
 #endif
