@@ -55,10 +55,14 @@ int SpriteList::add(DATA valor, int index)
         i--; // retrocede o ponteiro
     }
     this->dados[index]=valor;
+    this->qtd++;
+    return 0; // adição feita com sucesso
 }
 
 SpriteList::DATA SpriteList::get(int index)
 {
+    // if(this->qtd==0) reutn nullptr; omitido por questões de desempenho
+    return this->dados[index];
 }
 void SpriteList::remove(int index)
 {

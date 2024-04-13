@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include <stdio.h>
 
 /*****************************************************************************/
 /* CONSTRUTORES E DESTRUTORES */
@@ -12,11 +13,13 @@ Engine::Engine(int width, int height)
     this->isRunning = true;
 
     // inicializa o Resources
-    this->res = Resources::getInstance();;
+    this->res = Resources::getInstance();
     this->res->init(width, height);
-    sprite = new SimpleSprite("braid-jump-teste.png");
+    this->sprite[0] = new SimpleSprite("braid-jump-teste.png");
 
     // inicializa o SceneManager
+    this->sceneManager = SceneManager::getInstance();
+    this->sceneManager->init();
 
     // eventos de pressionamentos e soltura das teclas
     // dispara o gameloop
@@ -43,7 +46,6 @@ void Engine::render()
 {
     SDL_RenderClear(this->res->renderer);
     SDL_SetRenderDrawColor(this->res->renderer, 255, 0, 0, 255);
-    sprite->render();
     SDL_RenderPresent(this->res->renderer);
     //std::cout << this->res->deltaTime;
 }

@@ -4,7 +4,7 @@
 /** Uma lista de SDL_Texture, otimizada para operações de busca*/
 class SpriteList{
     private:
-    typedef SDL_Texture* DATA;
+    typedef SDL_Rect* DATA;
     //---------------------------------------------------------------------------------------------------------
     // ATRIBUTOS PRIVADOS
     //---------------------------------------------------------------------------------------------------------

@@ -2,6 +2,7 @@
 
 #include <SDL2/SDL.h>
 #include "Resources.h"
+#include "SceneManager.h"
 #include "sprites/types/SimpleSprite.h"
 #include "sprites/Sprite.h"
 
@@ -11,7 +12,8 @@ private:
     /* ATRIBUTOS PRIVADOS */
     Uint64 tempoAnterior, tempoAtual;
     Resources* res;
-    SimpleSprite* sprite;
+    SceneManager* sceneManager;
+    SimpleSprite* sprite[1000];
 
     /* MÉTODOS PRIVADOS */
     void checkEvents();

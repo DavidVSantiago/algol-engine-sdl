@@ -1,5 +1,4 @@
-#ifndef SIMPLE_SPRITE_H
-#define SIMPLE_SPRITE_H
+#pragma once
 
 #include "../Sprite.h"
 #include "SDL2/SDL_image.h"
@@ -36,7 +35,5 @@ public:
 
     /* MÉTODOS DO GAMELOOP --------------------------------------------------------*/
 
-    void render();
+    void render() override;
 };
-
-#endif

@@ -8,8 +8,7 @@ Resources *Resources::instance = nullptr; // inicialização da instância (espe
 
 Resources* Resources::getInstance()
 {
-    if (instance == nullptr)
-    {
+    if (instance == nullptr) {
         instance = new Resources;
     }
     return instance;
