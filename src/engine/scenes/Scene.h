@@ -22,11 +22,11 @@ public:
     /** Invocado quando a cena começa a ser exibida na tela */
     void onShow(); // abstract
     /** Inicializa todos os recursos assíncronos da cena, principalmente as imagens */
-    virtual void startLoadResources()=0; // abstract
+    //virtual void startLoadResources()=0; // abstract
 
 
     /* MÉTODOS DO GAMELOOP */
-    virtual void handleEvents()=0;
-    virtual void update()=0;
-    virtual void render()=0;
+    void handleEvents();
+    void update();
+    void render();
 }
