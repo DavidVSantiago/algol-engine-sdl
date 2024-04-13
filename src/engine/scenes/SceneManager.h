@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Scene.h"
+#include "LoadingScene.h"
 
 /** SINGLETON que gerencia o caregamento e transição entre as cenas do jogo
  * Classe usada pela maioria das outras classes da engine */
@@ -8,6 +9,7 @@ class SceneManager {
     
 private:
     static SceneManager* instance; // singleton
+
     /* CONSTRUTORES E DESTRUTORES PRIVADOS*/
     SceneManager(){}
     ~SceneManager(){}
@@ -17,6 +19,7 @@ private:
 public:
     Scene* actualScene;
     Scene* loadingScene;
+    
     /* MÉTODOS */
     static SceneManager* getInstance();
     void init();/** Inicializa os recursos do SceneManager */
@@ -26,4 +29,4 @@ public:
     void handleEvents();
     void update();
     void render();
-}
+};

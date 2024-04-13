@@ -3,3 +3,4 @@ src/*.cpp
 src/engine/*.cpp
 src/engine/sprites/*.cpp
 src/engine/sprites/types/*.cpp
+src/engine/scenes/*.cpp

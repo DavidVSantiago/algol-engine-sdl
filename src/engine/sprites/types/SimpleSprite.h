@@ -16,7 +16,7 @@ public:
     int cw, ch; // dimensões do recorte da imagem
 
     /* CONSTRUTORES E DESTRUTORES -------------------------------------------------*/
-    SimpleSprite(char* fileSource, int cx = 0, int cy = 0, int cw = 0, int ch = 0);
+    SimpleSprite(std::string fileSource, int cx = 0, int cy = 0, int cw = 0, int ch = 0);
     ~SimpleSprite();
    
     /* GETTERS & SETTERS ----------------------------------------------------------*/
@@ -24,14 +24,14 @@ public:
     /** Retorna o frame único do sprite para a renderização. */
     SDL_Rect* getFrame() override;
 
+    /** Retorna a posição correta para a renderização na tela. */
+    SDL_Rect* getPos() override; // abstract
+
     /* MÉTODOS --------------------------------------------------------------------*/
     
     /** Inicializa o processamento de recorte dos frames do sprite
     * só pode ser invocada após a imagem ser totalmente carregada (Image.onload) */
     void init() override;
-
-    /** Verifica se a imagem está vazia (com todos os pixels transparentes) */
-    bool checkEmptyImage(SDL_Surface* img, SDL_Rect cut);
 
     /* MÉTODOS DO GAMELOOP --------------------------------------------------------*/
 

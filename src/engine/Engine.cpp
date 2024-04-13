@@ -15,7 +15,6 @@ Engine::Engine(int width, int height)
     // inicializa o Resources
     this->res = Resources::getInstance();
     this->res->init(width, height);
-    this->sprite[0] = new SimpleSprite("braid-jump-teste.png");
 
     // inicializa o SceneManager
     this->sceneManager = SceneManager::getInstance();
@@ -45,9 +44,8 @@ void Engine::update()
 void Engine::render()
 {
     SDL_RenderClear(this->res->renderer);
-    SDL_SetRenderDrawColor(this->res->renderer, 255, 0, 0, 255);
+    this->sceneManager->render();
     SDL_RenderPresent(this->res->renderer);
-    //std::cout << this->res->deltaTime;
 }
 
 void Engine::gameloop()

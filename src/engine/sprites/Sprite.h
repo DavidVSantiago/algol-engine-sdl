@@ -15,8 +15,10 @@ class Sprite
 public:
     /* ATRIBUTOS ------------------------------------------------------------------*/
     SpriteList *frames; // matriz de frames do sprite
+    int lineNumbers; // numero de linhas da matriz de frames
     int posX;
     int posY;
+    SDL_Rect* pos;
     int speedX;
     int speedY;
     bool loaded;
@@ -31,6 +33,9 @@ public:
     /** Retorna o frame correto para a renderização. */
     virtual SDL_Rect *getFrame() = 0; // abstract
 
+    /** Retorna a posição correta para a renderização na tela. */
+    virtual SDL_Rect *getPos()=0;
+
     /* MÉTODOS --------------------------------------------------------------------*/
 
     /** Invocado após os recursos da imagem serem todos carregados */
@@ -38,10 +43,10 @@ public:
 
     /** Inicializa o o array de frames do sprite
      * @param {Number} lineNumbers numero de linhas no array (cada linha é um sprite) */
-    void initFramesList(int lineNumbers);
+    void initLinesList(int lineNumbers);
 
     /** carrega um textura no arquivo */
-    SDL_Texture* loadTexture(std::string path);
+    SDL_Texture* loadTexture(std::string fileSource);
 
     /* MÉTODOS DO GAMELOOP --------------------------------------------------------*/
 
