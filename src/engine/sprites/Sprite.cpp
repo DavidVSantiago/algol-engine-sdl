@@ -28,7 +28,7 @@ void Sprite::initLinesList(int lineNumbers)
 {
     this->lineNumbers=lineNumbers;
     // cria a matriz de sprites com a quantidade de linhas definidas
-    frames = new SpriteList[lineNumbers];
+    frames = new ListaEstatica<SDL_Rect*>[lineNumbers];
 }
 
 SDL_Texture* Sprite::loadTexture(std::string fileSource) {

@@ -1,4 +1,4 @@
-src/engine/utils/*.cpp
+src/engine/utils/*.h
 src/*.cpp
 src/engine/*.cpp
 src/engine/sprites/*.cpp

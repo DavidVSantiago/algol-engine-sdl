@@ -14,7 +14,7 @@ class Sprite
 {
 public:
     /* ATRIBUTOS ------------------------------------------------------------------*/
-    SpriteList *frames; // matriz de frames do sprite
+    ListaEstatica<SDL_Rect*>*frames; // matriz de frames do sprite
     int lineNumbers; // numero de linhas da matriz de frames
     int posX;
     int posY;

@@ -4,7 +4,9 @@
 #include "Scene.h"
 #include "../sprites/types/SimpleSprite.h"
 
-
+/***********************************************************************************/
+/* CLASSE QUE REPRESENTA A CENA DE ESPERA PARA CARREGAMENTO DE RECURSOS */
+/***********************************************************************************/
 class LoadingScene : public Scene {
     
 public:
