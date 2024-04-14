@@ -5,6 +5,8 @@
 #include "../sprites/types/SimpleSprite.h"
 #include "../utils/estruturas_de_dados.h"
 
+class SceneLayer; // declaração antecipada
+
 /***********************************************************************************/
 /* CLASSE QUE REPRESENTA UMA CENA SIMPLES */
 /***********************************************************************************/
@@ -19,8 +21,8 @@ public:
     ListaEstatica<SceneLayer*>* sceneLayersList; // lista de layers da cena
 
     /* CONSTRUTORES E DESTRUTORES PRIVADOS*/
-    SimpleScene(std::string name):Scene(name){}
-    ~SimpleScene(){}
+    SimpleScene(std::string name);
+    ~SimpleScene();
     
     // GETTERS & SETTERS
 
