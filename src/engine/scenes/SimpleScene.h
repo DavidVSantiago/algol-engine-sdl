@@ -11,22 +11,29 @@ class SceneLayer; // declaração antecipada
 /* CLASSE QUE REPRESENTA UMA CENA SIMPLES */
 /***********************************************************************************/
 class SimpleScene : public Scene {
+private:
+    int layersSize = 10; // quantidade padrão de layers de uma cena
+
     
 public:
     /* ATRIBUTOS DE TRANSIÇÃO DE TELA*/
     Uint32 elapsedTime;
-    Uint32 transitionDurationTime;
+    Uint32 fadeDurationTime;
     Uint32 minTransitionTime;
 
-    ListaEstatica<SceneLayer*>* sceneLayersList; // lista de layers da cena
+    SceneLayer** sceneLayersList; // lista de layers da cena
 
     /* CONSTRUTORES E DESTRUTORES PRIVADOS*/
     SimpleScene(std::string name);
     ~SimpleScene();
     
-    // GETTERS & SETTERS
+    /* MÉTODOS */
+    void registrarSprite(Sprite* sprite, int layerIndex);
 
     /* MÉTODOS DO GAMELOOP */
+    void render() override;
+    void handleEvents() override;
+    void update() override;
 };
 
 /***********************************************************************************/

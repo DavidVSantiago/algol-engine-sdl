@@ -32,7 +32,7 @@ void Sprite::initLinesList(int lineNumbers)
 }
 
 SDL_Texture* Sprite::loadTexture(std::string fileSource) {
-    std::string source = "src/assets/imgs/"+fileSource;
+    std::string source = Resources::PATH_IMGS_ASSETS+fileSource;
     // The final texture
     SDL_Texture *newTexture = NULL;
     // Load image at specified path

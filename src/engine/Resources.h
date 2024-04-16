@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL2/SDL.h>
+#include <string>
 
 class Resources
 {
@@ -17,6 +18,9 @@ public:
     int screenWidth,screenHeigth;
     SDL_Window *window;
     SDL_Renderer *renderer;
+    
+    /* CONSTANTES ESTÁTICAS */
+    static std::string PATH_IMGS_ASSETS;
 
     /* MÉTODOS */
     static Resources* getInstance();

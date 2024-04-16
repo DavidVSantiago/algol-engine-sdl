@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "scenes/SimpleScene.h"
 #include <stdio.h>
 
 /*****************************************************************************/
@@ -19,6 +20,12 @@ Engine::Engine(int width, int height)
     // inicializa o SceneManager
     this->sceneManager = SceneManager::getInstance();
     this->sceneManager->init();
+
+    // TODO este código deve ser levado para a classe que herda de Engine
+    SimpleScene* cenaSplash = new SimpleScene("SPLASH");
+    Sprite* fundo = new SimpleSprite("splash.png");
+    cenaSplash->registrarSprite(fundo,0);
+    this->sceneManager->startScene(cenaSplash);
 
     // eventos de pressionamentos e soltura das teclas
     // dispara o gameloop

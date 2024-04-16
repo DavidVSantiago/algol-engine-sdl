@@ -1,6 +1,9 @@
 #pragma once
 #include "SDL2/SDL.h"
 
+// ESTE ARQUIVO POSSUI IMPLEMENTAÇÕES DE ESTRUTURAS DE DADOS GENÉRICAS PARA USO DA ENGINE
+
+
 /***********************************************************************************/
 /* IMPLEMENTAÇÃO DE LISTA ESTÁTICA */
 /***********************************************************************************/

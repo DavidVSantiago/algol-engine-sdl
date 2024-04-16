@@ -2,6 +2,7 @@
 
 #include "Scene.h"
 #include "LoadingScene.h"
+#include "../Resources.h"
 
 /** SINGLETON que gerencia o caregamento e transição entre as cenas do jogo
  * Classe usada pela maioria das outras classes da engine */
@@ -19,6 +20,7 @@ private:
 public:
     Scene* actualScene;
     Scene* loadingScene;
+    Resources* res;
     
     /* MÉTODOS */
     static SceneManager* getInstance();
