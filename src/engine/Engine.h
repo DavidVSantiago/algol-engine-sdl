@@ -3,12 +3,10 @@
 #include <SDL2/SDL.h>
 #include "Resources.h"
 #include "scenes/SceneManager.h"
-#include "sprites/types/SimpleSprite.h"
-#include "sprites/Sprite.h"
 
 class Engine
 {
-private:
+protected:
     /* ATRIBUTOS PRIVADOS */
     Uint64 tempoAnterior, tempoAtual;
     Resources* res;

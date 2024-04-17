@@ -33,6 +33,12 @@ public:
     * só pode ser invocada após a imagem ser totalmente carregada (Image.onload) */
     void init() override;
 
+    /** define a transparência da textura (0-255)*/
+    void setTextureAlpha(int alpha);
+
+    /** Liga ou desliga o blending mode*/ 
+    void changeBlendMode(bool flag);
+
     /* MÉTODOS DO GAMELOOP --------------------------------------------------------*/
 
     void render() override;

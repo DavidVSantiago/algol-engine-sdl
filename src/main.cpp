@@ -1,10 +1,8 @@
-#include "engine/Engine.h"
-#include "engine/sprites/Sprite.h"
-#include "engine/sprites/types/SimpleSprite.h"
+#include "Game.h"
 
 int main(int argv, char** args)
 {
-    Engine* engine = new Engine(800,600);
+    Game* engine = new Game(800,600);
 
     return 0;
 }

@@ -61,6 +61,15 @@ void SimpleSprite::init()
     }
 }
 
+void SimpleSprite::setTextureAlpha(int alpha){
+    SDL_SetTextureAlphaMod(this->img,alpha);
+}
+
+void SimpleSprite::changeBlendMode(bool flag){
+    if(flag) SDL_SetTextureBlendMode(this->img,SDL_BLENDMODE_BLEND);
+    else SDL_SetTextureBlendMode(this->img,SDL_BLENDMODE_NONE);
+}
+
 //---------------------------------------------------------------------------------------------------------
 // MÉTODOS DO GAMELOOP
 //---------------------------------------------------------------------------------------------------------

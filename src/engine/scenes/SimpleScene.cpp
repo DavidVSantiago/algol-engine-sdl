@@ -6,19 +6,26 @@
 SimpleScene::SimpleScene(std::string name):Scene(name){
     elapsedTime=0; // tempo decorrido da cena
     fadeDurationTime=500; // tempo que dura um fade de transição de uma cena (metade da transição completa)
+    int width = this->res->screenWidth;
+    int height = this->res->screenHeigth;
+
+    blackScreen = new SimpleSprite("blackscreen.png");
+    blackScreen->setTextureAlpha(230);
+    blackScreen->changeBlendMode(true);
     
+
     /* inicializa o a lista de layers da cena */
     sceneLayersList = new SceneLayer*[layersSize];
     for(int i=0;i<layersSize;i++){
         sceneLayersList[i]=new SceneLayer();
     }
-    for(int i=0;i<1000000000;i++){
+    /*for(int i=0;i<1000000000;i++){
         int v1=10;
         int v2=300;
         int v3=20;
         int v4 = v1/v2;
         int v5=(v4/v3)*v1;
-    }
+    }*/
 }
 SimpleScene::~SimpleScene(){}
 
@@ -38,6 +45,7 @@ void SimpleScene::render(){
     for(int i=0;i<layersSize;i++){
         sceneLayersList[i]->render();
     }
+    blackScreen->render(); // renderiza a tela preta da transição
 }
 
 void SimpleScene::handleEvents(){

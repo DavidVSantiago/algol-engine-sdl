@@ -25,7 +25,10 @@ public:
     /* MÉTODOS */
     static SceneManager* getInstance();
     void init();/** Inicializa os recursos do SceneManager */
+    
     void startScene(Scene* scene);
+
+    void showLoadingScene();
 
     /* MÉTODOS DO GAMELOOP */
     void handleEvents();

@@ -8,7 +8,6 @@
 
 Engine::Engine(int width, int height)
 {
-
     // inicializa o SDL
     SDL_Init(SDL_INIT_EVERYTHING);
     this->isRunning = true;
@@ -21,15 +20,7 @@ Engine::Engine(int width, int height)
     this->sceneManager = SceneManager::getInstance();
     this->sceneManager->init();
 
-    // TODO este código deve ser levado para a classe que herda de Engine
-    SimpleScene* cenaSplash = new SimpleScene("SPLASH");
-    Sprite* fundo = new SimpleSprite("splash.png");
-    cenaSplash->registrarSprite(fundo,0);
-    this->sceneManager->startScene(cenaSplash);
-
     // eventos de pressionamentos e soltura das teclas
-    // dispara o gameloop
-    gameloop();
 }
 
 Engine::~Engine()

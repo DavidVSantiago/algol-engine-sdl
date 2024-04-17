@@ -20,6 +20,8 @@ public:
     Uint32 elapsedTime;
     Uint32 fadeDurationTime;
     Uint32 minTransitionTime;
+    // tela preta para a transição
+    SimpleSprite* blackScreen;
 
     SceneLayer** sceneLayersList; // lista de layers da cena
 

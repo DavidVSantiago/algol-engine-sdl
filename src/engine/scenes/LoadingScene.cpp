@@ -21,6 +21,6 @@ void LoadingScene::update(){
 
 }
 void LoadingScene::render(){
-    SDL_SetRenderDrawColor(this->res->renderer, 0, 0, 0, 255);
+    //SDL_SetRenderDrawColor(this->res->renderer, 0, 0, 0, 255);
     this->loadingImage->render();
 }

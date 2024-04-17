@@ -23,14 +23,15 @@ SceneManager* SceneManager::getInstance(){
 void SceneManager::init(){
     this->res = Resources::getInstance();
     this->loadingScene = new LoadingScene("LOADING"); // cena usada entre os carregamentos das cenas
-    // já exibe a tela de loading, antes de carregar o splash
-    SDL_RenderClear(this->res->renderer);
-    this->loadingScene->render();
-    SDL_RenderPresent(this->res->renderer);
     this->changeScene(this->loadingScene); // cena atual será essa
 }
 void SceneManager::startScene(Scene* scene){
     this->changeScene(scene);
+}
+void SceneManager::showLoadingScene(){
+    SDL_RenderClear(this->res->renderer);
+    this->loadingScene->render();
+    SDL_RenderPresent(this->res->renderer);
 }
 
 //---------------------------------------------------------------------------------------------------------
